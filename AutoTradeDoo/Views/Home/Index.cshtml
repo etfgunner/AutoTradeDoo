@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AutoTradeDoo.Models.Automobil>
+@{
+    ViewBag.Title = "Početna stranica";
+}
+@Styles.Render("~/Content/index.css")
+<div class="plate">
+    <p class="script"><span>Auto Trade</span></p>
+    <p class="shadow text1">POGLEDAJ</p>
+    <p class="shadow text1">PROBAJ</p>
+    <p class="shadow text3">KUPI!</p>
+    <p class="script"><span>d.o.o.</span></p>
+</div>
+<div class="news">
+    <hr />
+    @Html.ActionLink("Prijavi se na newsletter", "Index", "Newsletters", null, new { @style = "color: #000000; font-size: 24px; font-family: Arial, Helvetica, sans-serif;" })
+    <hr />
+</div>

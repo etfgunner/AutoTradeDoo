@@ -1,0 +1,114 @@
+﻿@model AutoTradeDoo.Models.Automobil
+
+@{
+    ViewBag.Title = "Detalji";
+}
+
+<div>
+    <h4>Automobil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <td>
+            @{
+                var base64 = Convert.ToBase64String(Model.Image);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+
+            <img src="@imgSrc" width="480" height="360" />
+        </td>
+        <br />
+        <dt>
+            @Html.DisplayName("Proizvođač")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proizvodjac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Godište")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godiste)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Kilometraža")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kilometraza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gorivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gorivo)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayName("Emisioni standard")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmisioniStandard)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Broj vrata")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrojVrata)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tip)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Velicina felgi")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VelicinaFelgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transmisija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transmisija)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Broj stepeni prijenosa")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrojStepeniPrijenosa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Izmjeni", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Nazad", "Index")
+</p>

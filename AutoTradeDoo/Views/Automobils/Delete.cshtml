@@ -1,0 +1,19 @@
+﻿@model AutoTradeDoo.Models.Automobil
+
+@{
+    ViewBag.Title = "Brisanje";
+}
+
+<h3>Da li ste sigurni da želite obrisati sadržaj?</h3>
+<div>
+    <h4>Automobil</h4>
+    <hr />
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Obriši" class="btn btn-default" /> |
+            @Html.ActionLink("Nazad", "Index")
+        </div>
+    }
+</div>
